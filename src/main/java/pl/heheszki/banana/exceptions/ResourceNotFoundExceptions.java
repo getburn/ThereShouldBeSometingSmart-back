@@ -1,0 +1,15 @@
+package pl.heheszki.banana.exceptions;
+
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class ResourceNotFoundExceptions extends RuntimeException{
+
+    private static final Long serialVersionUID = 1L;
+
+    public ResourceNotFoundExceptions (String message) {
+        super(message);
+    }
+}
